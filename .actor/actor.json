@@ -1,0 +1,12 @@
+{
+	"actorSpecification": 1,
+	"name": "finn-job-scraper",
+	"title": "Finn.no Job Scraper",
+	"description": "Scrapes job listings from Finn.no including job details, company information, and contact details.",
+	"version": "1.0",
+	"meta": {
+		"templateId": "ts-crawlee-cheerio"
+	},
+	"input": "./input_schema.json",
+	"dockerfile": "./Dockerfile"
+}
