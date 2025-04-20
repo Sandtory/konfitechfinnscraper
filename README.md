@@ -41,11 +41,22 @@ The scraper outputs an array of job objects with the following structure:
 {
   "url": "https://www.finn.no/job/fulltime/ad.html?finnkode=123456789",
   "title": "Software Developer",
-  "description": "Full job description text...",
+  "description": "Arbeidsoppgaver:\n• Utvikling av nye funksjoner\n• Vedlikehold av eksisterende systemer\n• Samarbeid med produktteam\n\nKvalifikasjoner:\n• Erfaring med moderne teknologier\n• God problemløsningsevne\n• Teamplayer med gode kommunikasjonsevner",
   "company": "Example Company AS",
-  "contactPerson": "John Doe",
-  "phoneNumber": "123 45 678",
-  "email": "contact@example.com",
+  "contactPersons": [
+    {
+      "name": "John Doe",
+      "role": "HR Manager",
+      "phoneNumber": "123 45 678",
+      "email": "john.doe@example.com"
+    },
+    {
+      "name": "Jane Smith",
+      "role": "Department Head",
+      "phoneNumber": "234 56 789",
+      "email": "jane.smith@example.com"
+    }
+  ],
   "applicationUrl": "https://example.com/apply",
   "location": "Oslo",
   "employmentType": "Heltid",
@@ -53,6 +64,19 @@ The scraper outputs an array of job objects with the following structure:
   "publicationDate": "Snarest"
 }
 ```
+
+## Key Features
+
+- Comprehensive contact information extraction from multiple sources:
+  - Structured contact person elements in the page
+  - Unstructured contact information in "Kontaktinformasjon" sections
+  - Names, emails, and phone numbers stored as a structured array
+  - Intelligent mapping of related contact details
+- Clean, formatted job descriptions:
+  - HTML-free text with preserved formatting
+  - Well-structured content with section headings
+  - Lists preserved with bullet points
+  - Line breaks and paragraph structure maintained
 
 ## How it works
 
